@@ -1,9 +1,9 @@
 import { app, shell, BrowserWindow } from 'electron';
 import { join } from 'path';
 import { electronApp, optimizer, is } from '@electron-toolkit/utils';
-import icon from '../../resources/icon.png?asset';
 import menuHandler from './menu';
 import { windowSaveConfig, windowSaveHandler } from './window.save';
+import icon from '../../resources/icon.png?asset';
 
 const preload = join(__dirname, '../preload/index.js');
 
@@ -14,7 +14,7 @@ const createWindow = (): void => {
   const mainWindow = new BrowserWindow({
     title: 'Main window',
     show: false,
-    autoHideMenuBar: true,
+    // autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
       preload,
@@ -35,6 +35,7 @@ const createWindow = (): void => {
   });
 
   if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
+    mainWindow.webContents.openDevTools();
     mainWindow.loadURL(process.env['ELECTRON_RENDERER_URL']);
   } else {
     mainWindow.loadFile(join(__dirname, '../renderer/index.html'));
