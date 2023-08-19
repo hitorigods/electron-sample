@@ -1,10 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { HelmetProvider } from 'react-helmet-async'
-import Head from './Head'
-import App from './App'
-import '@fontsource-variable/noto-sans-jp'
-import './main.scss'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { HelmetProvider } from 'react-helmet-async';
+import Head from './Head';
+import App from './App';
+import '@fontsource-variable/noto-sans-jp';
+import './main.scss';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -12,5 +12,5 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <Head />
       <App />
     </HelmetProvider>
-  </React.StrictMode>
-)
+  </React.StrictMode>,
+);

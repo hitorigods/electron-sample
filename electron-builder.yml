@@ -11,8 +11,12 @@ files:
   - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
   - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
   - '!window.save.json'
-asarUnpack:
-  - resources/**
+# asarUnpack:
+#   - resources/**
+extraResources:
+  from: 'resources/'
+  to: './app'
+  filter: ['**/*']
 afterSign: build/notarize.js
 win:
   executableName: MyApp
