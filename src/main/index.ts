@@ -4,6 +4,7 @@ import { electronApp, optimizer, is } from '@electron-toolkit/utils';
 import menuHandler from './menu';
 import { windowSaveConfig, windowSaveHandler } from './window.save';
 import icon from '../../resources/icon.png?asset';
+import './api/';
 
 const preload = join(__dirname, '../preload/index.js');
 
@@ -19,6 +20,8 @@ const createWindow = (): void => {
     webPreferences: {
       preload,
       sandbox: false,
+      nodeIntegration: false,
+      contextIsolation: true,
     },
     ...windowSaveConfig,
   });
