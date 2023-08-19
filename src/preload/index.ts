@@ -1,7 +1,10 @@
 import { contextBridge } from 'electron';
 import { electronAPI } from '@electron-toolkit/preload';
+import myApi from './api';
 
-const api = {};
+const api = {
+  ...myApi,
+};
 
 if (process.contextIsolated) {
   try {

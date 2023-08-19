@@ -53,8 +53,8 @@ const windowSaveHandler = (window: Electron.BrowserWindow): void => {
 
   // アプリ終了時に画面情報を保存するよう設定
   window.on('close', () => {
-    const windowSizes = window ? window.getSize() : [1280, 800];
-    const windowPositions = window ? window.getPosition() : [0, 0];
+    const windowSizes = window ? window.getSize() : [defaultSetting.width, defaultSetting.height];
+    const windowPositions = window ? window.getPosition() : [defaultSetting.x, defaultSetting.y];
     const fileContents = {
       x: windowPositions[0],
       y: windowPositions[1],
