@@ -25,6 +25,7 @@ const createWindow = (): void => {
     ...windowSaveConfig,
   });
 
+  // ウィンドウ保存の実行
   windowSaveHandler(mainWindow);
 
   mainWindow.on('ready-to-show', () => {
