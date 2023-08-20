@@ -30,3 +30,9 @@ $ npm run build:linux
 ### ICON Generater
 
 [icon-gen](https://github.com/akabekobeko/npm-icon-gen)
+
+### Font
+
+[Fontsource Noto Sans JP](https://www.npmjs.com/package/@fontsource-variable/noto-sans-jp)
+
+[SF Mono Square](https://fontsgeek.com/sf-mono-square-font)
