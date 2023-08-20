@@ -26,3 +26,7 @@ $ npm run build:mac
 # For Linux
 $ npm run build:linux
 ```
+
+### ICON Generater
+
+[icon-gen](https://github.com/akabekobeko/npm-icon-gen)
